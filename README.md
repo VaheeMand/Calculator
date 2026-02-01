@@ -99,7 +99,7 @@ Plugins are stored in `localStorage` and executed automatically on startup.
 
 ---
 
-### ![Example Plugins](plugin-examples)
+### [Example Plugins](plugin-examples)
 
 ---
 

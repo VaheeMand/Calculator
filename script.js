@@ -6,6 +6,11 @@ const input = document.getElementById("input");
 const fileinput = document.getElementById("fileinput");
 const darkThemToggler = document.getElementById("darkThemToggler");
 
+const savedTheme = localStorage.getItem("darkMode");
+if (savedTheme === "enabled") {
+  document.documentElement.classList.add("dark");
+}
+
 const items = ["(",")","⌫","/",
               "7","8","9","*",
               "4","5","6","-",
@@ -76,7 +81,8 @@ function buttonClick(button) {
 }
 
 function darkToggle() {
-  document.documentElement.classList.toggle("dark");
+  const isDark = document.documentElement.classList.toggle("dark");
+  localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
 }
 
 
